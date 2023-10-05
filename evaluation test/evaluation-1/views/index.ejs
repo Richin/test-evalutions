@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="account-header">
+                <div class="my-account">
+                    <button>My Account</button>
+                </div>
+                <div class="sign-up">
+                    <a href="/signup">Sign Up</a>
+                </div>
+            </div>
+            <div class="banner">
+                <p>Got an account? Enter your details to begin</p>
+            </div>
+            <form action="/" method="POST" id="form" onsubmit="return checkInput()">
+                    <div class="form-control ">
+                        <input type="text" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-control">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                    </div>
+                    <input type="checkbox" name="" id="remember">
+                    <p>Remember Me</p>
+                    <div class="forgot">
+                        <input class="login" type="submit" value="LOGIN">
+                        <a class="forgot" href="#"> Forgot Password?</a>
+                    </div>
+            </form>
+            <div class="signin-options">
+                <div class="options flex">
+                    <p>Sign-in with:</p>
+                </div>
+                <div class="facebook flex" >
+                    <div class="logo">
+                        <img src="./images/brand-facebook-filled.png" alt="facebook logo">
+                    </div>
+                    <p>Facebook</p>
+                </div>
+                <div class="twitter flex" >
+                    <div class="logo">
+                        <img src="./images/brand-twitter-filled.png" alt="twitter logo">
+                    </div>
+                    <p>Twitter</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var form = document.getElementById('form');
+
+        var password = document.getElementById("password");
+
+        var email = document.getElementById("email");
+        var formControl;
+        var errorm = 0;
+        var errorp =0;
+        form.addEventListener("submit" ,e =>{
+
+            
+            if(checkInput()){
+                if((errorm+errorp)!==4){
+                    email.style.borderBottom = "1px solid red"
+                }else{
+                email.style.border = "1px solid green"
+                password.style.borderBottom = "1px solid green"
+                }
+            }else{
+                if(errorm!=0){
+                    email.style.borderBottom = "1px solid red"
+                }
+                if(errorp!==0){
+                    password.style.borderBottom = "1px solid red"
+                }
+
+                errorm = 0;
+                errorp =0;
+            }
+        });
+
+        function checkInput(){
+            var emailValue = email.value.trim()
+            var passwordValue = password.value.trim()
+            if(emailValue ==''){
+                errorm++ ;  
+            }
+            if(passwordValue == ''){
+                errorp++;
+                return false;
+            }else{
+                return true;
+            }
+        }
+            
+        //     if(passwordValue ===''){
+        //        //add error class
+        //        setErrorFor(password);
+        //        return false;
+        //     }else{
+        //        //add success class
+        //       return true;
+        //     }
+        //     if(emailValue ===''){
+        //         //add error class
+        //         setErrorFor(email , "Username cannot be blank");
+        //        return false;
+        //     }else{
+        //        //add success class
+        //        return true;
+        //     }
+        // }
+
+        //     if (passwordValue === "") {
+        //         setError(password)
+        //         return false;
+        //     } else {
+        //             return true;
+        //     }
+        // }
+        
+        // form.addEventListener("submit" ,e =>{
+        //     alert(checkInput())
+
+        //     if(checkInput()){
+        //         e.preventDefault();
+        //     }else{
+        //         alert("good")
+        //     }
+            
+        // })
+        
+        
+            //get values from inputs
+        //     alert('HI')
+
+        //     if(emailValue ===''){
+        //         //add error class
+        //         
+        //         alert("email")
+        //         return false;
+        //     }else if(passwordValue ===''){
+        //         //add error class
+        //         setError(password);
+        //         alert("pwd")
+        //         return false;
+        //     }else{
+        //         return true;
+        //     }
+        // }
+
+        function setError(input){
+            // add error class
+            formControl = input.parentElement();
+                formControl.className = "form-control error";
+
+
+        }
+
+        function validateEmail(input) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+
+
+
+    </script>
+</body>
+</html>

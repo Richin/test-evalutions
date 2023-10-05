@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(14 64 97);
+    font-family: "Open Sans", sans-serif;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex img{
+    width: 30px;
+    height: 20px;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: white;
+    width: 450px;
+    min-width: 401px;
+}
+.account-header{
+    display: flex;
+}
+.my-account{
+    width: 50%;
+    background-color: rgb(12 80 125);
+    padding-top: 8px;
+    text-align: center;
+}
+.sign-up{
+    width: 50%;
+}
+.account-header button{
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.my-account a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    
+}
+.sign-up button{
+    background-color: rgb(7 54 82);
+}
+.banner{
+    background-color: #418fbf;
+    height:40px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.banner p{
+    color: white;
+    text-align: center;
+}
+form{
+    padding-left: 20px;
+    margin-bottom: 10px
+}
+.form-control 
+input,
+select{
+    width: 90%;
+    height: 40px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.486);
+    color: gray;
+    outline: none;
+}
+input[type=text]:focus {
+    border-bottom: 2px solid rgb(14 64 97); ;
+}
+.blue{
+    color: #1D9BF0;
+}
+
+form p{
+    display: inline-block;
+    width: 93%;
+    height: 30px;
+    color: gray;
+    font-size: 0.8rem;
+}
+.confirm{
+    text-align: end;
+    padding-right: 25px;
+    padding-bottom: 10px;
+}
+form .login{
+    width: 70px;
+    height: 30px;
+    background-color:rgb(255 127 39);
+    color: #fff;
+    border: none;
+    margin-right: 10px;
+}
+
+form .cancel{
+    width: 70px;
+    height: 30px;
+    background-color:red;
+    color: #fff;
+    border: none;
+}
+
+.signin-options{
+    display: flex;
+}
+.options{
+    background-color: black;
+}
+
+.flex {
+    color: #fff;
+}
+.flex{
+    width: 34%;
+    height: 50px;
+}
+
+.flex img{
+    width: 28px;
+    height: 27px;
+    color: white;
+}
+.logo{
+    width: 50px;
+    padding: 10px;
+    text-align: center;
+}
+.facebook .logo{
+    background-color: rgb(44 73 132);;
+}
+.twitter .logo{
+    background-color: rgb(77 156 215);
+}
+
+.facebook p{
+    background-color: 	#3a5998;
+}
+
+.twitter{
+    background-color: #1D9BF0;
+}
+
+.flex p{
+    display: inline-block;
+    width: 66%;
+    text-align: center;
+    padding-top: 10px;
+}
+div .options p{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.error input , .error select{
+    border-bottom: 2px solid red;
+}
+

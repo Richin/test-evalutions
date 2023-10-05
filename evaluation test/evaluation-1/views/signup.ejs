@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval</title>
+    <link rel="stylesheet" href="./signup.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <div class="account-header">
+                <div class="my-account">
+                    <a href="/">My Account</a>
+                </div>
+                <div class="sign-up">
+                    <button>Sign Up</button>
+                </div>
+            </div>
+            <div class="banner">
+                <p>Got an account? Enter your details to begin</p>
+            </div>
+            <form action="/signup" method="POST" id="form" onsubmit="return checkInput()">
+                    <div class="form-control">
+                        <input type="text" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-control">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-control">
+                        <input type="password" id="password2" name="password2" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-control ">
+                        <input type="text" id="company" name="company" placeholder="Company">
+                    </div>
+                    <div class="form-control ">
+                        <label for="gender" >
+                            <select name="gender" name="gender"  id="gender" value="Gender">
+                                <option value="" disabled selected>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="no">Prefer not to say</option>
+                            </select>
+                        </label>
+                    </div>
+                    
+                    <input type="checkbox">
+                    <p>Send the latest news and updates</p>
+                    
+                    <input type="checkbox">
+                    <p class="blue">I agree the terms and conditions</p>
+                    
+                    <form class="confirm" method="post" action="/" >
+                        <button class="login" type="submit" value="SIGNUP">SIGNUP</button>
+                        <input class="cancel" type="reset" value=" CANCEL">
+                    </form>
+            </form>
+            <div class="signin-options">
+                <div class="options flex">
+                    <p>Sign-in with:</p>
+                </div>
+                <div class="facebook flex" >
+                    <div class="logo">
+                        <img src="./images/brand-facebook-filled.png" alt="facebook logo">
+                    </div>
+                    <p>Facebook</p>
+                </div>
+                <div class="twitter flex" >
+                    <div class="logo">
+                        <img src="./images/brand-twitter-filled.png" alt="twitter logo">
+                    </div>
+                    <p>Twitter</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        alert(message);
+
+        const form = document.getElementById('form');
+        const company = document.getElementById("company");
+        const password = document.getElementById("password");
+        const password2 = document.getElementById("password2");    
+        const email = document.getElementById("email");
+        var checkbox = document.querySelector("input[name=checkbox]");
+
+        checkbox.addEventListener('change', function() {
+        if (!this.checked) {
+            setError(checkbox)
+        } 
+        });
+
+        form.addEventListener("submit" ,e =>{
+
+            
+            if(checkInput()){
+                if((errorm+errorp)!==4){
+                    email.style.borderBottom = "1px solid red"
+                }else{
+                email.style.border = "1px solid green"
+                password.style.borderBottom = "1px solid green"
+                }
+            }else{
+                if(errorm!==0){
+                    email.style.borderBottom = "1px solid red"
+                }
+                if(errorp!==0){
+                    password.style.borderBottom = "1px solid red"
+                }
+                if(errorpt!==0){
+                    password2.style.borderBottom = "1px solid red"
+                }
+                if(errorc!==0){
+                    company.style.borderBottom = "1px solid red"
+                }
+
+                errorm = 0;
+                errorp =0;
+                errorc = 0;
+                erropt = 0;
+
+            }
+        });
+
+        function checkInput(){
+            var emailValue = email.value.trim();
+            var passwordValue = password.value.trim();
+            var companyValue = company.value.trim();
+            var password2Value = password2.value.trim();
+            if(emailValue ==''){
+                errorm++ ;  
+            }
+            if(passwordValue == ''){
+                errorp++;
+            }
+            if(password2Value ===''){
+                //add error class
+                errorpt++;
+            }
+            if(companyValue ===''){
+                //add error class
+                errorc++;
+            }
+            if(passwordValue !== password2Value){
+                setError(password2);
+            }
+            if((errorp+errorg+errorm+errorpt)!==0){
+                return false
+            }
+            
+            else{
+                return true;
+            }
+        }
+
+        function checkInput(){
+        //get values from inputs
+            
+            if(emailValue ===''){
+                //add error class
+                setError(email);
+            }
+            if(passwordValue ===''){
+                //add error class
+                setError(password);
+            }
+            if(password2Value ===''){
+                //add error class
+                setError(password2);
+            }
+            if(companyValue ===''){
+                //add error class
+                setError(company);
+            }
+            if(passwordValue !== password2Value){
+                setError(password2);
+            }
+        }
+
+        function setError(input){
+            // add error class
+        
+            const formControl = input.parentElement;
+            formControl.className = "form-control error";
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
