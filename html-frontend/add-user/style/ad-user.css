@@ -1,0 +1,185 @@
+@import url("../../public/variable.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form-container{
+    width: 100%;
+    height: 100vh;
+    padding: 1rem 2rem 2rem 8rem;
+}
+
+.top-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.close-button{
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(
+    90deg,
+    rgba(254, 148, 74, 1) 0%,
+    rgba(252, 101, 113, 1) 100%
+  );
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.add-user-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left-section,
+.right-section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.firstname,
+.username,
+.password,
+.phone,
+.joining-date,
+.lastname,
+.email,
+.confirm-password{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-style,
+.company-select-btn,
+.role-selection-btn,
+.profile-picture
+{
+    width: 85%;
+    height: 2.5rem;
+    border: 1px solid rgba(80, 76, 76, 0.5);
+    background-color: var(--WHITE-COlOR);
+}
+
+.mt{
+    margin-top: 1.5rem;
+}
+
+span{
+    color: rgb(218, 45, 45);
+}
+
+.company,
+.role{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.company-list,
+.role-list{
+    width: 100%;
+    height: fit-content;
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--WHITE-COlOR);
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+
+.show{
+    display: flex;
+}
+
+.company-list .company,
+.role-list .role{
+    width: 100%;
+    height: 2.5rem;
+    border-bottom: 1px solid rgba(61, 55, 55, 0.733);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.company-list .company:hover,
+.role-list .role:hover
+{
+    background-color: rgb(191, 194, 196);
+}
+
+.company-list .company > p{
+    margin-left: 1rem;
+}
+
+.company-select-btn,
+.role-selection-btn
+{
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: rgba(110, 93, 93, 0.658);
+}
+
+
+.profile-picture{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+}
+
+.profile-picture-label{
+    margin-top: 1.5rem;
+}
+
+.profile-picture > input{
+    margin-left: 1rem;
+}
+
+.add-user-form > button{
+    background: var(--ORABGE-COLOR);
+    border: none;
+    width: 8rem;
+    height: 2.3rem;
+    color: var(--WHITE-COlOR);
+    border-radius: .3rem;
+    font-size: 1rem;
+    margin: 1.25rem 4rem 0 0;
+    cursor: pointer;
+}
+
+
+.border-red{
+    border: 1px solid rgb(209, 61, 61);
+}
+
+.error{
+    color:rgb(209, 61, 61) ;
+    font-size: 1.2rem;
+    display: none;
+}

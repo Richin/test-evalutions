@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add user</title>
+    <link rel="stylesheet" href="./style/ad-user.css" />
+    <link rel="stylesheet" href="../dashboard/style/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="navbar">
+        <div class="logo-section">
+          <img src="../assets/logo.png" alt="" />
+          <p>HRMS Technologies</p>
+        </div>
+        <div class="profile-section">
+          <div class="profile-section-drop-down-button" data-profile-drop-btn>
+            <img src="../assets/profile.png" alt="" />
+            <p>Admin</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <div class="profile-dropdown-box" data-profile-dropdown>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <p>Logout</p>
+          </div>
+        </div>
+      </div>
+      <!-- side-bar and employee list container -->
+      <div class="content-container">
+        <div class="side-bar">
+          <div class="dashboard">
+            <p>Dashboard</p>
+          </div>
+          <div class="emplyees">
+            <p>Employees</p>
+          </div>
+        </div>
+        <div class="form-container">
+          <!-- title and close button -->
+          <div class="top-section">
+            <p>Add User</p>
+            <div class="close-button" data-close>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <p class="error" data-error-field>fdfdsfsdf</p>
+          <form class="add-user-form" onsubmit="return formValidate()" data-form>
+            <div class="input-section">
+                <div class="left-section">
+              <div class="firstname mt">
+                <label >First Name<span>*</span></label>
+                <input type="text" class="input-style" data-firstname />
+              </div>
+              <div class="username mt">
+                <label >Username<span>*</span></label>
+                <input type="text" class="input-style" data-username />
+              </div>
+              <div class="password mt">
+                <label >Password<span>*</span></label>
+                <input type="password" class="input-style" data-password/>
+              </div>
+              <div class="phone mt">
+                <label >Phone</label>
+                <input type="text" class="input-style" data-phone-number />
+              </div>
+              <div class="company mt">
+                <label>Company</label>
+                <div class="company-select-btn" data-company-selection-btn>
+                  <p data-company-name>Select Company</p>
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div class="company-list" data-company-list>
+                    <div class="company comapny-list-box" >
+                        <p>Triassic</p>
+                    </div>
+                    <div class="company comapny-list-box">
+                        <p>Zomato</p>
+                    </div>
+                </div>
+              </div>
+              <div class="joining-date mt">
+                <label >Joining Date<span>*</span></label>
+                <input type="date" class="input-style"  id="" data-date />
+              </div>
+            </div>
+            <div class="right-section">
+              <div class="lastname mt">
+                <label >Last Name<span>*</span></label>
+                <input type="text" class="input-style" data-lastname />
+              </div>
+              <div class="email mt">
+                <label >Email<span>*</span></label>
+                <input type="text" class="input-style" data-email/>
+              </div>
+              <div class="confirm-password mt">
+                <label 
+                  >Confirm Password<span>*</span></label
+                >
+                <input
+                  type="password"
+                  class="input-style"
+                  data-confirm-password
+                />
+              </div>
+              <div class="role mt">
+                <label>Role</label>
+                <div class="role-selection-btn" data-role-selection-btn>
+                  <p data-role-name>Role</p>
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div class="role-list" data-role-list>
+                    <div class="role role-list-box">
+                        <p>Admin</p>
+                    </div>
+                    <div class="role role-list-box">
+                        <p>Employee</p>
+                    </div>
+                </div>
+              </div>
+              <div class="employee-id mt">
+                <label>Employee ID<span>*</span></label>
+                <input type="text" class="input-style" data-employee-id />
+              </div>
+              <label class="profile-picture-label">Profile Picture</label>
+              <div class="profile-picture mt">
+                <input type="file" />
+              </div>
+            </div>
+            </div>
+            <button data-submit-button>Create User</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script/add-user.js" ></script>
+  </body>
+</html>
