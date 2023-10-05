@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-2">
+        <div class="navbar">
+            <div id="top-nav-wrap">
+                <a href="#home" style="font-size: medium;">home</a>
+                <a href="#contact-us" style="font-size: medium;">Contact us</a>
+            </div>
+            <a href="cart.html" class="fas fa-shopping-cart" class="icons"></a>
+        </div>
+      </div>
+      <div class="header-1">
+        <a href="" class="logo"><img src="MYBOOKS your online bookshop.png"></i></a>
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="Search by title, author, ISBN..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+          <p>Free world wide delivery <br> with every order</p>
+      </div>
+    </header>
+    <div class="drop">
+      <div class="dropdown-1">
+        <button onclick="myFunction()" class="dropbtn">Category</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#Graphic-design">Graphic design</a>
+          <a href="#Web-design">Web design</a>
+        </div>
+      </div>
+      <div class="dropdown-2">
+        <button onclick="myFunction()" class="dropbtn">Author</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#Cath-Caldwell">Cath Caldwell</a>
+          <a href="#J-Duckett">J Duckett</a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-navbar">
+      <a href="#home" class="fas fa-home"></a>
+      <a href="#contact-us" class="fas fa-list"></a>
+      <a href="cart.html" class="fas fa-shopping-cart" class="icons"></a>
+    </div>
+    <div class="book-new-book">
+      <div class="book-wrapper">
+        <div class="book-wrap">
+          <div class="book-cover">
+            <img src="Screenshot 2023-10-03 123009.png" alt="book" height="240px">
+          </div>
+          <div>
+            <div class="name-author-div">
+                <div class="book-name">
+                    <h3 class="book" >Graphic design for everyone</h3>
+                </div>
+                <div class="author-name">
+                    <h3 class="author">Cath Caldwell</h3>
+                </div>
+            </div>
+          </div>
+          <div class="book-cash">
+              <h2>$26.99</h2>
+          </div>
+          <div class="add-cart-div">
+              <button class="add-cart-btn">Add to Basket</button>
+          </div>
+        </div>
+        <div class="book-wrap">
+            <div class="book-cover">
+                <img src="Screenshot 2023-10-03 164835.png" alt="book" height="240px">
+            </div>
+            <div>
+              <div class="name-author-div">
+                <div class="book-name">
+                    <h3 class="book">Web design using HTML, CSS, JavaScript</h3>
+                </div>
+                <div class="author-name">
+                    <h3 class="author">J Duckett</h3>
+                </div>
+              </div>
+            </div>
+            <div class="book-cash">
+              <h2>$26.99</h2>
+            </div>
+            <div class="add-cart-div">
+              <button class="add-cart-btn">Add to Basket</button>
+            </div>
+        </div>
+      </div>
+      <div class="new-book">
+          <div class="new-book-info">
+          <h2 style="text-align:left;">Add new book</h2>
+          <input type="text" name="Name" placeholder="Name" class="book-input" >
+          <input type="text" name="Author" placeholder="Author" class="book-input">
+          <input type="text" name="Genre" placeholder="Genre" class="book-input">
+          <input type="text" name="ISBN" placeholder="ISBN" class="book-input">
+          <input type="number" name="Quantity" placeholder="Quantity" class="book-input">
+          <input type="button" value="ADD BOOK" class="book-input-btn"> 
+          </div>  
+      </div>
+    </div>
+    <script src="script.js"></script>  
+  </body>
+</html>
