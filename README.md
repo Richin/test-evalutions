@@ -12,4 +12,4 @@
  - Created By: **John doe**
  - Created On: **2022-01-20 12:00:00**
  
-[ShowTicketDetails](show_ticket_details##status##priority##site##equipment##count/list)
+[ShowTicketDetails](show_ticket_details##ticketid)
